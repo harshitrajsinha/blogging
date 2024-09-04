@@ -11,6 +11,8 @@ root \
 └── readme.md
 
 
-[Pages mindmap](https://whimsical.com/blogging-com-EobhaBRie8wpQUu4HrZhSR)
+[Website mindmap](https://whimsical.com/blogging-com-EobhaBRie8wpQUu4HrZhSR)
+
+[website theme inspiration](https://themewagon.github.io/blanca/)
 
 
