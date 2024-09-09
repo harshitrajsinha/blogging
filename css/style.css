@@ -10,33 +10,41 @@ body{
     font-family: sans-serif;
 }
 
-nav{
+header{
     background-color: rgb(0, 119, 255);
-    height: 5rem;
     width: 100%;
+    /* % value for padding are relative to width of container, hence suitable in case of changing width but not heigth */
     padding-left: 5%;
     padding-right: 5%;
+    /* 'padding' is more suitable to give a height compared to 'height' property as height may cause issue in case of content overflow (in case of different screen-size) */
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-
-label.logo{
+header label.logo{
     color: white;
     font-size: 2rem;
     font-weight: bold;
-    line-height: 5rem;
 }
 
-nav > ul {
-    float: right;
+nav.menu ul {
+    display: flex;
 }
 
-nav > ul > li{
-    display: inline-block;
-    line-height: 5rem;
+nav.menu ul li{
     padding: 0rem 2rem;
 }
 
-nav > ul > li > a{
+nav.menu ul li a{
     color: white;
     font-size: 1rem;
+    padding: 1rem; /* This padding is applied to create a background on hover*/
+    border-radius: 0.2rem;
+}
+
+nav.menu ul li a:hover{
+    background-color: rgb(0, 81, 255);
 }
