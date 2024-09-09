@@ -11,17 +11,16 @@ body{
 }
 
 header{
-    background-color: rgb(0, 119, 255);
+    background-color: rgb(0, 119, 255); /* sets background color of navbar */
     width: 100%;
-    /* % value for padding are relative to width of container, hence suitable in case of changing width but not heigth */
     padding-left: 2rem;
     padding-right: 2rem;
     /* 'padding' is more suitable to give a height compared to 'height' property as height may cause issue in case of content overflow (in case of different screen-size) */
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Inital alignment of label and nav are vertical, display makes them horizontal (nav shifts to right but li are still vertical) */
+    justify-content: space-between; /* Pushes label to left and nav to right and maximize space between them */
+    align-items: center; /* Centers the content (text in case of label) and nav li elements from top and bottom of header container*/
 }
 
 header label.logo{
@@ -31,22 +30,15 @@ header label.logo{
 }
 
 nav.menu ul {
-    display: flex;
-    align-items: center;
+    display: flex; /* Inital alignment of li elements are vertical, display makes them horizontal */
 }
 
 nav.menu ul li{
-    padding: 0rem 2rem;
+    padding: 0rem 2rem; /* Padding between two li elements */
 }
 
 nav.menu ul li a{
     color: white;
     font-size: 1rem;
-    padding: 1rem; /* This padding is applied to create a background on hover*/
-    border-radius: 0.2rem;
-    white-space: nowrap; /* Prevents text from breaking into multiple lines (In 'About Us', the 'Us' part goes to the next line on change of screen size */
-}
-
-nav.menu ul li a:hover{
-    background-color: rgb(0, 81, 255);
+    white-space: nowrap; /* Prevents text from breaking into multiple lines ('About Us', the 'Us' part may go to the next line on change of screen size) */
 }
