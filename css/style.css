@@ -14,8 +14,8 @@ header{
     background-color: rgb(0, 119, 255);
     width: 100%;
     /* % value for padding are relative to width of container, hence suitable in case of changing width but not heigth */
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 2rem;
+    padding-right: 2rem;
     /* 'padding' is more suitable to give a height compared to 'height' property as height may cause issue in case of content overflow (in case of different screen-size) */
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -32,6 +32,7 @@ header label.logo{
 
 nav.menu ul {
     display: flex;
+    align-items: center;
 }
 
 nav.menu ul li{
@@ -43,6 +44,7 @@ nav.menu ul li a{
     font-size: 1rem;
     padding: 1rem; /* This padding is applied to create a background on hover*/
     border-radius: 0.2rem;
+    white-space: nowrap; /* Prevents text from breaking into multiple lines (In 'About Us', the 'Us' part goes to the next line on change of screen size */
 }
 
 nav.menu ul li a:hover{
