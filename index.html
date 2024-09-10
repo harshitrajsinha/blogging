@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Encodes wide range of characters from most languages around the world. The following characters will be encoded (converted into computer understandable code) Arabic: مرحبا بالعالم! || Emoji: 😀 🚀 🌍 (check elements tab; without this meta tag: Arabic: ???? ??????! || Emoji: ??? ??? ???) -->
     <meta charset="UTF-8">
+
+    <!-- Ensures the webpage adapts to the device's screen size and loads at a natural zoom level for a better user experience -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Simple website to register blogs">
+    <meta name="keywords" content="blog, coding, HTML, meta tags">
+    <meta name="author" content="Raj Sinha">
     <title>Blogging.com</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
+        <input type="checkbox" id="check">
+        <label for="check" class="hamburger-icon"><i class="fa fa-bars"></i></label>
         <label class="logo">Blogging</label>
         <nav class="menu">
             <ul>
@@ -17,6 +27,6 @@
             </ul>
         </nav>
     </header>
-    
+
 </body>
 </html>

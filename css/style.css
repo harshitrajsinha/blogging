@@ -1,13 +1,16 @@
-*{
-    padding:0;
-    margin:0;
-    text-decoration: none;
+body, ul {
+    padding: 0;
+    margin: 0;
     list-style: none;
-    box-sizing: border-box;
 }
 
-body{
+a {
+    text-decoration: none;
+}
+
+body {
     font-family: sans-serif;
+    box-sizing: border-box;
 }
 
 header{
@@ -15,7 +18,7 @@ header{
     width: 100%;
     padding-left: 2rem;
     padding-right: 2rem;
-    /* 'padding' is more suitable to give a height compared to 'height' property as height may cause issue in case of content overflow (in case of different screen-size) */
+    /* 'padding' is more suitable for assigning height to navbar compared to 'height' property as height may cause issue in case of content overflow (in case of different screen-size) */
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     display: flex; /* Inital alignment of label and nav are vertical, display makes them horizontal (nav shifts to right but li are still vertical) */
@@ -41,4 +44,53 @@ nav.menu ul li a{
     color: white;
     font-size: 1rem;
     white-space: nowrap; /* Prevents text from breaking into multiple lines ('About Us', the 'Us' part may go to the next line on change of screen size) */
+}
+
+/* Creating hamburger menu on change of screen size */
+
+header label.hamburger-icon{
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    order: 3; /* Flexbox property (display:flex) to change the order of elements, while maintaining the HTML structure. */
+    display: none; /* Hide hamburger menu icon on desktop screen */
+}
+#check{
+    display: none; /* Hide hamburger menu checkbox */
+}
+
+@media (max-width: 858px) {
+
+    header label.hamburger-icon{
+        display: block; /* Show hamburger menu icon on desktop screen */
+    }
+
+    /* header{
+        display: block;  // This will make logo and hamburger menu to vertical
+    } */
+
+    nav.menu ul{
+        display: block;  /* Makes the ul (li elements) vertical; still contained within the navbar */
+        position: fixed;
+        background-color: #2c3e50;
+        width: 100%;     /* ul takes complete width like header */
+        height: 100vh;  /* ul takes complete viewport height except label */
+        top: 5rem;  /* push down ul 5rem (approx height of label/navbar) from top */
+        left: -100%;  /* push ul left of screen by complete width (to make hidden initally) */
+        text-align: center; /* makes the content center horizontally */
+        transition: all 0.5s; 
+    }
+
+    nav.menu ul li{
+        margin: 5rem 0;
+    }
+
+    nav.menu ul li a{
+        font-size: 1rem;
+        white-space: nowrap;
+    }
+
+    #check:checked ~ nav.menu ul {
+        left: 0;  /* if checked, change nav.menu ul from -100% to 0 */
+    }
 }
